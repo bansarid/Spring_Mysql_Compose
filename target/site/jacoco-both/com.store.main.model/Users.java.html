@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Users.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">store_data</a> &gt; <a href="index.source.html" class="el_package">com.store.main.model</a> &gt; <span class="el_source">Users.java</span></div><h1>Users.java</h1><pre class="source lang-java linenums">package com.store.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component
+public class Users {
+	
+	@Id
+	String username;
+	String email;
+	String city;
+	String age;
+	String password;
+	
+	
+	
+	
+	public Users(String username, String email, String city, String age, String password) {
+<span class="nc" id="L23">		super();</span>
+<span class="nc" id="L24">		this.username = username;</span>
+<span class="nc" id="L25">		this.email = email;</span>
+<span class="nc" id="L26">		this.city = city;</span>
+<span class="nc" id="L27">		this.age = age;</span>
+<span class="nc" id="L28">		this.password = password;</span>
+<span class="nc" id="L29">	}</span>
+	
+<span class="nc" id="L31">	public Users() {</span>
+		
+<span class="nc" id="L33">	}</span>
+	
+	
+	public String getUsername() {
+<span class="nc" id="L37">		return username;</span>
+	}
+	public void setUsername(String username) {
+<span class="nc" id="L40">		this.username = username;</span>
+<span class="nc" id="L41">	}</span>
+	public String getCity() {
+<span class="nc" id="L43">		return city;</span>
+	}
+	public void setCity(String city) {
+<span class="nc" id="L46">		this.city = city;</span>
+<span class="nc" id="L47">	}</span>
+	public String getAge() {
+<span class="nc" id="L49">		return age;</span>
+	}
+	public void setAge(String age) {
+<span class="nc" id="L52">		this.age = age;</span>
+<span class="nc" id="L53">	}</span>
+	public String getEmail() {
+<span class="nc" id="L55">		return email;</span>
+	}
+	public void setEmail(String email) {
+<span class="nc" id="L58">		this.email = email;</span>
+<span class="nc" id="L59">	}</span>
+	public String getPassword() {
+<span class="nc" id="L61">		return password;</span>
+	}
+	public void setPassword(String password) {
+<span class="nc" id="L64">		this.password = password;</span>
+<span class="nc" id="L65">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L69">		return &quot;Users [username=&quot; + username + &quot;, email=&quot; + email + &quot;, city=&quot; + city + &quot;, age=&quot; + age + &quot;, password=&quot;</span>
+				+ password + &quot;]&quot;;
+	}
+	
+	
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

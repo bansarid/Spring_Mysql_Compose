@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BooksService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">store_data</a> &gt; <a href="index.source.html" class="el_package">com.store.main.service</a> &gt; <span class="el_source">BooksService.java</span></div><h1>BooksService.java</h1><pre class="source lang-java linenums">package com.store.main.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.store.main.model.Books;
+
+@Service
+<span class="nc" id="L13">public class BooksService {</span>
+	
+	@Autowired
+	BooksRepository BooksRepository;
+	
+	public List&lt;Books&gt; getAllBooks(){
+<span class="nc" id="L19">		List&lt;Books&gt; books = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L20">		BooksRepository.findAll()</span>
+<span class="nc" id="L21">		.forEach(books::add);</span>
+		
+<span class="nc" id="L23">		return books;</span>
+		
+	}
+	
+	public Optional&lt;Books&gt; getBook(String Id) {
+		
+<span class="nc" id="L29">		return BooksRepository.findById(Id);</span>
+	}
+	
+	public void addBooks(Books books) {
+<span class="nc" id="L33">		BooksRepository.save(books);</span>
+<span class="nc" id="L34">	}</span>
+	
+	public void deleteBooks(String Id) {
+<span class="nc" id="L37">		BooksRepository.deleteById(Id);</span>
+<span class="nc" id="L38">	}</span>
+	
+	public void updateBooks(Books book, String Id) {
+<span class="nc" id="L41">		BooksRepository.save(book);</span>
+<span class="nc" id="L42">	}</span>
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>
